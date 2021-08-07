@@ -13,7 +13,12 @@ namespace Laptop.Controllers
 {
     public class HomeController : Controller
     {
+        //private readonly ILogger<HomeController> _logger;
 
+        //public HomeController(ILogger<HomeController> logger)
+        //{
+        //    _logger = logger;
+        //}
         private InterfaceLappy _lappyRepo;
         public HomeController(InterfaceLappy _lappyRepo)
         {
