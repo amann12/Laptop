@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Laptop.Models.Lappy>
+@{
+    ViewData["Title"] = "AllDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AllDetails</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Laptop Name </th>
+            <th scope="col">Number of Ports </th>
+            <th scope="col">Processor</th>
+            <th scope="col">Graphic Card</th>
+            <th scope="col">RAM</th>
+            <th scope="col">Memory</th>
+            <th scope="col">Screen</th>
+            <th scope="col">Price</th>
+            <th scope="col">View</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.LaptopName</td>
+                <td>@i.NumberOfPorts</td>
+                <td>@i.Processor</td>
+                <td>@i.GraphicCard</td>
+                <td>@i.RAM</td>
+                <td>@i.Memory</td>
+                <td>@i.Screen</td>
+                <td>@i.Price</td>
+                <td>
+                    <a asp-controller="Home" asp-action="SingleDetails" asp-route-id="@i.Id">View</a>
+                </td> 
+                <td>
+                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@i.Id">Edit</a>
+                </td>
+                <td>
+                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@i.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

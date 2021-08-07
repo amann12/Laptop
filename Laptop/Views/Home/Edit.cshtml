@@ -1,0 +1,82 @@
+﻿@model Laptop.ViewModel.EditLappyViewModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit Laptop Details</h1>
+<form asp-controller="Home" asp-action="Edit" enctype="multipart/form-data" method="post" class="mt-3">
+    <div asp-validation-summary="All" class="text-danger">
+    </div>
+    <div class="form-group row">
+        <label asp-for="LaptopName" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="LaptopName" class="form-control" placeholder=" Laptop Name">
+            <span asp-validation-for="LaptopName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="NumberOfPorts" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="NumberOfPorts" class="form-control" placeholder="Number of ports">
+            <span asp-validation-for="NumberOfPorts" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="Processor" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Processor" class="form-control" placeholder="Processor">
+            <span asp-validation-for="Processor" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="GraphicCard" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="GraphicCard" class="form-control" placeholder="Graphic Card">
+            <span asp-validation-for="GraphicCard" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="RAM" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="RAM" class="form-control" placeholder="RAM">
+            <span asp-validation-for="RAM" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label asp-for="Memory" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Memory" class="form-control" placeholder="Memory">
+            <span asp-validation-for="Memory" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="Screen" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Screen" class="form-control" placeholder="Screen">
+            <span asp-validation-for="Screen" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label asp-for="Price" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input asp-for="Price" class="form-control" placeholder="Price">
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a asp-action="index" asp-controller="home" class="btn btn-primary">Cancel</a>
+        </div>
+    </div>
+
+    
+</form>
+

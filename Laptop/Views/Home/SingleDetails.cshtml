@@ -1,0 +1,35 @@
+﻿@model Laptop.Models.Lappy
+@{
+    ViewData["Title"] = "SingleDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>SingleDetails</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Laptop Name </th>
+            <th scope="col">Number of Ports </th>
+            <th scope="col">Processor</th>
+            <th scope="col">Graphic Card</th>
+            <th scope="col">RAM</th>
+            <th scope="col">Memory</th>
+            <th scope="col">Screen</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.LaptopName</td>
+            <td>@Model.NumberOfPorts</td>
+            <td>@Model.Processor</td>
+            <td>@Model.GraphicCard</td>
+            <td>@Model.RAM</td>
+            <td>@Model.Memory</td>
+            <td>@Model.Screen</td>
+            <td>@Model.Price</td>
+        </tr>
+    </tbody>
+</table>
+
