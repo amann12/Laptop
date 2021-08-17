@@ -34,6 +34,7 @@ namespace Laptop.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult SingleDetails(int Id)
         {
             Lappy l = _lappyRepo.GetLappy(Id);
